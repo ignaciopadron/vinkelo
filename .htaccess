@@ -1,0 +1,20 @@
+# Denegar acceso a todos los directorios y archivos excepto a public
+RewriteEngine On
+RewriteRule ^app/ - [F,L]
+RewriteRule ^vendor/ - [F,L]
+
+# Redirigir todo al directorio public
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Prevenir acceso a archivos sensibles
+<FilesMatch "^\.ht|\.env|composer\.(json|lock)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Ocultar información del servidor
+ServerSignature Off 

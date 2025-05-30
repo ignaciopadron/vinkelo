@@ -1,0 +1,50 @@
+# Archivos de configuración con datos sensibles
+app/config/config.php
+**/config.php
+
+# Scripts de generación de hashes y contraseñas
+**/generar_hash.php
+
+# Scripts de limpieza temporales
+limpieza_archivos.sh
+
+# Archivos de ejemplo para referencia
+!app/config/config.example.php
+
+# Archivos de caché y logs
+*.log
+*.cache
+informe_estructura.txt
+
+# Archivos temporales
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.*
+!.env.example
+
+# Directorios de dependencias (si se agregan en el futuro)
+/vendor/
+/node_modules/
+
+# Directorios de imágenes de usuario (uploads)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# Archivos específicos del IDE/editor
+.idea/
+.vscode/
+*.sublime-*
+*.code-workspace
+
+# Archivos de respaldo
+*~
+*.bak 
+backup_archivos_*/
+
+# Archivos SQL con datos sensibles
+*.sql 

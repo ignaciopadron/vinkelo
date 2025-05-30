@@ -1,0 +1,33 @@
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Establecer directorio base
+RewriteBase /
+
+# Permitir acceso directo a archivos y directorios existentes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todas las solicitudes no existentes a index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Opciones adicionales de seguridad
+<IfModule mod_headers.c>
+    # Deshabilitar la detección MIME
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Habilitar la protección XSS para navegadores modernos
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Deshabilitar el enmarcado del sitio (protección contra clickjacking)
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Prevenir acceso a archivos sensibles
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Ocultar información del servidor
+ServerSignature Off 

@@ -3,6 +3,7 @@
 Vinkelo es una aplicación web para la gestión y presentación de un catálogo de vinos, diseñada con un enfoque MVC (Modelo-Vista-Controlador) y siguiendo buenas prácticas de desarrollo.
 
 ![Página de inicio de Vinkelo](public/assets/img/freepik_fondo_home.png)
+*Imagen creada con la suite creativa de IA de Freepik*
 
 ## 📜 Tabla de Contenidos
 

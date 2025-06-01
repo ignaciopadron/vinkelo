@@ -5,9 +5,6 @@ app/config/config.php
 # Scripts de generación de hashes y contraseñas
 **/generar_hash.php
 
-# Scripts de limpieza temporales
-limpieza_archivos.sh
-
 # Archivos de ejemplo para referencia
 !app/config/config.example.php
 
@@ -44,7 +41,9 @@ Thumbs.db
 # Archivos de respaldo
 *~
 *.bak 
-backup_archivos_*/
 
 # Archivos SQL con datos sensibles
 *.sql 
+
+# Documentación interna
+Proyecto_Vinkelo_IgnacioPadron.pdf 

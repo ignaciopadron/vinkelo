@@ -35,11 +35,10 @@ El proyecto sigue una arquitectura MVC (Modelo-Vista-Controlador) para separar r
 vinkelo/
 ├── public/                     # Contenido público accesible
 │   ├── index.php               # Punto de entrada único
-│   ├── assets/                 # Recursos estáticos
-│   │   ├── css/                # Hojas de estilo
-│   │   ├── js/                 # JavaScript
-│   │   └── img/                # Imágenes y logos
-│   └── uploads/                # Imágenes de productos
+│   └── assets/                 # Recursos estáticos
+│       ├── css/                # Hojas de estilo
+│       ├── js/                 # JavaScript
+│       └── img/                # Imágenes y logos
 │
 ├── app/                        # Código de la aplicación
 │   ├── config/                 # Configuración
